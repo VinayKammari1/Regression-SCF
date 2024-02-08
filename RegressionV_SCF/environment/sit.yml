@@ -1,0 +1,62 @@
+server:
+  base_url: https://tf-sit-01.go-yubi.in
+  host_login: https://tf-sit-01.go-yubi.in
+  host_auth: https://auth.credavenue.in/oauth/token
+  auth0Client: eyJuYW1lIjoiYXV0aDAtcmVhY3QiLCJ2ZXJzaW9uIjoiMS4xMS4wIn0=
+  client_id: 8wX7KpwXzxugX1i7f0RHRLvbPxAtovra
+  redirect_uri: https://tf-sit-01.go-yubi.in
+  state: UVBmV2NXUXVSNDJzOUQxRy1YR0w2QUV4SEJHUVNuM3guVHRZRX5NeTJvWQ==
+  nonce: QjY0WlFkSG1TUTh1VG5XSV9kNlF2aGQ5eU5pOVdtb3BhNWJ2Zi1zNGkxWQ==
+  realm: Username-Password-Authentication
+  scope: 'openid profile email'
+  did_token: 'did=s:v0:b7344980-e27d-11ed-97d2-6117e0391020.+prfQPV6w32L/PWbJjXAPseCkHRGVvufMcxCybnW00M'
+  host_auth_mfa: https://auth-sit-01-api.go-yubi.in
+  host_audience: https://mp-api-stg.vivriti.in
+
+  download_s3_url : 
+  automation_url: 
+  wrapper_server_url: http://localhost:5001
+
+database:
+  db-host: sit-billdiscounting-sdp-api-01-bdrds-2-rdsinstance-hkwp7ir8xrr6.cabaui5ekxew.ap-south-1.rds.amazonaws.com
+  db-port: 5432
+  db-username: scf_svc
+  db-password: 7pqre00ALOCyQSUphhVj
+  db-name: ca_scf_sit
+
+endpoints:
+  invoice:
+    get_programs: programs/v2
+    create_invoice: invoices
+    assign_investor: invoices/assign_investor
+    approve_invoice: invoices/verify
+    invoice_details: invoices/{{invoice_id}}
+
+users:
+  pfl:
+    name: PFL
+    email: pfl@yopmail.com
+    password: Think@123
+    role: investor
+    # Current-Entity-Id: 620a2ed050b7c2001bbdb351
+    # Current-Group: investor
+  anchor1:
+    name: anchor1
+    email: ibanchort1@gmail.com
+    password: Think@123
+    role: anchor
+    # Current-Entity-Id: 63fc731d18d4400057adc37c
+    # Current-Group: customer
+    # Current-Sub-Group: anchor
+  icom_solutions:
+    name: icom_solutions
+    email: 16july@yopmail.com
+    password: Think@123
+    role: channel_partner
+  Aleena Susan:
+    name: Aleena Susan
+    email: aleena.susan@vivriticapital.com
+    password: Think@123
+    role: product_user
+    # Current-Entity-Id: 5a90f93b2d5c90bccd65a857
+    # Current-Group: product

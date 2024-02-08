@@ -1,0 +1,23 @@
+{
+    "create_invoice": {
+        "invoice[invoice_number]": "",
+        "invoice[invoice_value]": 100,
+        "invoice[invoice_date]": "2024-02-05",
+        "invoice[anchor_gstn]": "26VIBFY8799Z1Z1",
+        "invoice[vendor_gstn]": "26ABHCS6682H1Z1",
+        "invoice[program_id]": 1,
+        "invoice[instrument_id]": 1,
+		"invoice[investor_id]":13
+    },
+	"invoice_verify":{
+		"status": "approved",
+		"re_initiate": false,
+		"is_initiated": true,
+		"products": [
+			{
+				"program_group": "invoice",
+				"ids": []
+			}
+		]
+	}
+}

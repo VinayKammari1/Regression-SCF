@@ -1,0 +1,153 @@
+{
+"request":{
+    "requestHeader": {
+        "userDetail": {
+            "userCode": "28245",
+            "branchId": "5000541"
+        },
+        "tenantId": "505"
+    },
+    "loanBookingRequest": {
+        "loanDetail": {
+            "unitOfTenure": "1",
+            "tag": "LOAN",
+            "schemeCode": "SCF_008",
+            "requestChannelCode": "BRANCH",
+            "agreementDate": "18/02/2023",
+            "applicationCreationDate": "18/02/2023",
+            "repaymentScheduleSpecificationDetail": {
+                "tenure": 42,
+                "repaymentStartDate": "02/09/2023",
+                "rateTypeCode": "1",
+                "numberOfAdvanceInstallments": "0",
+                "interestStartDate": "03/08/2023",
+                "interestRate": 8.0,
+                "interestFreeDays": "0",
+                "installmentTypeCode": "201",
+                "installmentAmount": null,
+                "dueDay": "21",
+                "brokenPeriodDays": "0",
+                "anchorTypeCode": "BASERATE"
+            },
+            "repaymentSchedules": [
+                {
+                    "installmentNumber": "1",
+                    "installmentAmount": 100.92,
+                    "openingPrincipalBalance": 100.0,
+                    "principalComponent": 100.0,
+                    "interestComponent": 0.92,
+                    "closingBalance": "0",
+                    "effectiveInterestRate": 8.0,
+                    "numberOfDaysBetweenInstallments": 42,
+                    "advanceOrPrepaymentInstallment": "N",
+                    "dueDate": "02/09/2023",
+                    "emiPEMIFlag": "E"
+                }
+            ],
+            "productCode": "SCF",
+            "loanRefId": 34574,
+            "loanPurpose": "",
+            "loanDisbursalDetails": [
+                {
+                    "disbursalTypeCode": "Normal",
+                    "disbursalTransactionDate": "03/08/2023",
+                    "disbursalNo": "1",
+                    "disbursalDate": "03/08/2023",
+                    "disbursalAuthorName": "28245",
+                    "disbursalAmount": 100.0,
+                    "disbursalBreakUpDetails": [
+                        {
+                            "disbursalChargeAmount": 0.92,
+                            "disbursalAmount": 100.0,
+                            "disbursalPaymentDetails": [
+                                {
+                                    "sourcePaymentReferenceNumber": 34574,
+                                    "payoutbankId": "5001770",
+                                    "paymentModeCode": "ELECTRONIC_FUND_TRANSFER",
+                                    "subPaymentModeCode": "NEFT",
+                                    "paymentAmount": 99.08,
+                                    "instrumentNumber": "",
+                                    "instrumentDate": "03/08/2023",
+                                    "bankIdentificationType": "IFSC_CODE_KEY",
+                                    "bankIdentificationCode": "HDFC0000181",
+                                    "bankBranchCode": "HD039604",
+                                    "accountTypeCode": "SavingAccount",
+                                    "accountNumber": "374119112289",
+                                    "accountByName": "Ibvendor1",
+                                    "ignoreForDownload": "N"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "loanAccountNumber": "Xu0026g20240208154708",
+            "linkingDetail": null,
+            "loanAmountWithoutVAP": 100.0,
+            "disbursalChargeDetails": [
+                {
+                    "chargeId": "5003500",
+                    "chargeAmount": 0.92,
+                    "transactionChargeDate": "03/08/2023",
+                    "adjustChargeAtDisbursement": "Y"
+                }
+            ],
+            "customerNo": "GLBCUST00000188775",
+            "currencyCode": "INR",
+            "branchCode": "PUN01",
+            "applicationTypeCode": "NewApplication",
+            "applicationFormNumber": "Xu0026g20240208154708",
+            "applicationFileNumber": "Xu0026g20240208154708",
+            "repaymentCode": "7"
+        },
+        "gurantorCoapplicantDetails": [
+            {
+                "customerNumber": "GLBCUST00000187608",
+                "relationshipType": "2",
+                "partyRelationship": "SUBSIDIARY"
+            },
+            {
+                "customerNumber": "GLBCUST00000188776",
+                "relationshipType": "1"
+            }
+        ]
+    }
+},
+"response": {
+    "acknowledgement": null,
+    "responseCode": "success",
+    "responseString": null,
+    "payload": {
+        "requestReference": "34574",
+        "responseReference": "SCFPUN0SCF000005068730",
+        "paymentReferences": [
+            {
+                "sourcePaymentReferenceNumber": 34574,
+                "neoLmsPaymentReferenceId": 5434951
+            }
+        ],
+        "repaymentSchedule": [
+            {
+                "installmentNumber": 1,
+                "installmentAmount": 100.92,
+                "openingPrincipalBalance": 100.0,
+                "principalComponent": 100.0,
+                "interestComponent": 0.92,
+                "closingBalance": 0.0,
+                "effectiveInterestRate": 8.0,
+                "numberOfDaysBetweenInstallments": 30,
+                "advanceOrPrepaymentInstallment": "N",
+                "dueDate": "02/09/2023",
+                "emiPEMIFlag": "E",
+                "tdsRate": null,
+                "tdsAmount": null,
+                "netEffectiveInstallmentAmt": 100.92,
+                "installmentIndicatorFlag": "NA",
+                "calculatedInterestAmount": null,
+                "billFlag": "N",
+                "billedDate": null
+            }
+        ]
+    }
+}
+}

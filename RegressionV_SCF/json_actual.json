@@ -1,0 +1,114 @@
+{
+    "requestHeader": {
+        "userDetail": {
+            "userCode": "28245",
+            "branchId": "5000541"
+        },
+        "tenantId": "505"
+    },
+    "loanBookingRequest": {
+        "loanDetail": {
+            "unitOfTenure": "1",
+            "tag": "LOAN",
+            "schemeCode": "SCF_008",
+            "requestChannelCode": "BRANCH",
+            "agreementDate": "18/02/2023",
+            "applicationCreationDate": "18/02/2023",
+            "repaymentScheduleSpecificationDetail": {
+                "tenure": 43,
+                "repaymentStartDate": "02/09/2023",
+                "rateTypeCode": "1",
+                "numberOfAdvanceInstallments": "0",
+                "interestStartDate": "03/08/2023",
+                "interestRate": 8.0,
+                "interestFreeDays": "0",
+                "installmentTypeCode": "201",
+                "installmentAmount": null,
+                "dueDay": "21",
+                "brokenPeriodDays": "0",
+                "anchorTypeCode": "BASERATE"
+            },
+            "repaymentSchedules": [
+                {
+                    "installmentNumber": "1",
+                    "installmentAmount": 100.94,
+                    "openingPrincipalBalance": 100.0,
+                    "principalComponent": 100.0,
+                    "interestComponent": 0.94,
+                    "closingBalance": "0",
+                    "effectiveInterestRate": 8.0,
+                    "numberOfDaysBetweenInstallments": 43,
+                    "advanceOrPrepaymentInstallment": "N",
+                    "dueDate": "02/09/2023",
+                    "emiPEMIFlag": "E"
+                }
+            ],
+            "productCode": "SCF",
+            "loanRefId": 34540,
+            "loanPurpose": "",
+            "loanDisbursalDetails": [
+                {
+                    "disbursalTypeCode": "Normal",
+                    "disbursalTransactionDate": "03/08/2023",
+                    "disbursalNo": "1",
+                    "disbursalDate": "03/08/2023",
+                    "disbursalAuthorName": "28245",
+                    "disbursalAmount": 100.0,
+                    "disbursalBreakUpDetails": [
+                        {
+                            "disbursalChargeAmount": 0.94,
+                            "disbursalAmount": 100.0,
+                            "disbursalPaymentDetails": [
+                                {
+                                    "sourcePaymentReferenceNumber": 34540,
+                                    "payoutbankId": "5001770",
+                                    "paymentModeCode": "ELECTRONIC_FUND_TRANSFER",
+                                    "subPaymentModeCode": "NEFT",
+                                    "paymentAmount": 99.06,
+                                    "instrumentNumber": "",
+                                    "instrumentDate": "03/08/2023",
+                                    "bankIdentificationType": "IFSC_CODE_KEY",
+                                    "bankIdentificationCode": "HDFC0000181",
+                                    "bankBranchCode": "HD039604",
+                                    "accountTypeCode": "SavingAccount",
+                                    "accountNumber": "374119112289",
+                                    "accountByName": "Ibvendor1",
+                                    "ignoreForDownload": "N"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "loanAccountNumber": "anchor1vfYU20240207121853",
+            "linkingDetail": null,
+            "loanAmountWithoutVAP": 100.0,
+            "disbursalChargeDetails": [
+                {
+                    "chargeId": "5003500",
+                    "chargeAmount": 0.94,
+                    "transactionChargeDate": "03/08/2023",
+                    "adjustChargeAtDisbursement": "Y"
+                }
+            ],
+            "customerNo": "GLBCUST00000188775",
+            "currencyCode": "INR",
+            "branchCode": "PUN01",
+            "applicationTypeCode": "NewApplication",
+            "applicationFormNumber": "anchor1vfYU20240207121853",
+            "applicationFileNumber": "anchor1vfYU20240207121853",
+            "repaymentCode": "7"
+        },
+        "gurantorCoapplicantDetails": [
+            {
+                "customerNumber": "GLBCUST00000187608",
+                "relationshipType": "2",
+                "partyRelationship": "SUBSIDIARY"
+            },
+            {
+                "customerNumber": "GLBCUST00000188776",
+                "relationshipType": "1"
+            }
+        ]
+    }
+}

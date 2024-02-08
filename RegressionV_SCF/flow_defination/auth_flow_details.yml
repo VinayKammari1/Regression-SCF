@@ -1,0 +1,75 @@
+anchor:
+  #request to get the cookies
+  cookies:
+    url : "https://auth.credavenue.in/co/authenticate"
+    payload : {}
+    headers : {
+    'access-control-request-headers': 'auth0-client,content-type',
+    'access-control-request-method': 'POST',
+    'origin': 'https://tf-sit-01.go-yubi.in',
+    'referer': 'https://tf-sit-01.go-yubi.in'
+    }
+
+  #post authenticate request to get login ticket
+  login_ticket:
+    url : "https://auth.credavenue.in/co/authenticate"
+    payload : {
+      1: 'client_id=8wX7KpwXzxugX1i7f0RHRLvbPxAtovra&username=',
+      2: '', #{env['users'][user]['email']}
+      3: '&password=',
+      4: '', #{env['users'][user]['password']}
+      5: '&realm=Username-Password-Authentication&credential_type=http%3A%2F%2Fauth0.com%2Foauth%2Fgrant-type%2Fpassword-realm'
+    }
+    headers : {
+    'auth0-client': 'eyJuYW1lIjoiYXV0aDAtcmVhY3QiLCJ2ZXJzaW9uIjoiMS4xMS4wIn0=',
+    'origin': 'https://tf-sit-01.go-yubi.in',
+    'referer': 'https://tf-sit-01.go-yubi.in',
+    'cookie': '', #{did_token}
+    'Content-Type': 'application/x-www-form-urlencoded'
+    }
+
+  #post request to get the access token
+  access_token:
+    url : {
+      1: 'https://auth.credavenue.in/authorize?client_id=8wX7KpwXzxugX1i7f0RHRLvbPxAtovra&response_type=token id_token&redirect_uri=https://tf-sit-01.go-yubi.in&realm=Username-Password-Authentication&audience=https://mp-api-stg.vivriti.in&state=UVBmV2NXUXVSNDJzOUQxRy1YR0w2QUV4SEJHUVNuM3guVHRZRX5NeTJvWQ==&nonce=QjY0WlFkSG1TUTh1VG5XSV9kNlF2aGQ5eU5pOVdtb3BhNWJ2Zi1zNGkxWQ==&login_ticket=',
+      2: '', #{login_ticket}
+      3: '&scope=openid profile email&$auth0Client=eyJuYW1lIjoiYXV0aDAtcmVhY3QiLCJ2ZXJzaW9uIjoiMS4xMS4wIn0='
+      }
+
+    payload: {}
+    files: {}
+    headers : {
+    'referer': 'https://tf-sit-01.go-yubi.in',
+    'cookie': '' 
+    }
+
+    #post request to get the mfa token
+  mfa_token:
+    url : {
+      1: 'https://auth-sit-01-api.go-yubi.in/users/',
+      2: '', #{local_user_id}
+      3: '/mfa?product_id=CRDPL'
+    }
+
+    payload : {}
+    headers : {
+    'Authorization': '', #{access_token}
+    'Content-Type': 'text/plain'
+    }
+  
+  #post request to get the mfa token verification
+  mfa_token_verify:
+    url : {
+      1: 'https://auth-sit-01-api.go-yubi.in/users/',
+      2: '', #{local_user_id}
+      3: '/mfa_verify?'
+    }
+    payload : 'otp=999999&product_id=CRDPL'
+    headers : {
+    'origin': 'https://tf-sit-01.go-yubi.in',
+    'referer': 'https://tf-sit-01.go-yubi.in',
+    'Authorization': '', #{access_token}
+    'Content-Type': 'application/x-www-form-urlencoded'
+    }
+
+  
